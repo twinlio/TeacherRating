@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A website for rating your ASH teacher">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <!-- <link rel="icon" type="image/png" href="link" /> -->
+        <title>ASH: Rate Teacher</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='survey.css') }}">
+
+    </head>
+    
+    <body>
+        <h1>Rate your teachers</h1>
+        <br>
+        <form action="" method="post" id="form">
+          <div id="loopedItems">
+          {% for class in classes %}
+          <div class="step">
+            <div class="infoLabel" id="sept">{{ class[0] }} Block : {{ class[1] }}</div>
+
+            <div class="AssessLabel">Teaching</div>
+            <input id="sept" type="range" min="1" max="10" step="1" value="5" name={{class[1].replace(" ","") + '0'}} oninput="this.nextElementSibling.value = this.value" id="range" class="istyle">
+            <output>5</output>
+            <div class="AssessLabel">Knowledge</div>   
+            <input id="sept" type="range" min="1" max="10" step="1" value="5" name={{class[1].replace(" ","") + '1'}}  oninput="this.nextElementSibling.value = this.value" id="range" class="istyle">
+            <output>5</output>
+
+            <div class="AssessLabel">Personality</div>
+            <input id="sept" type="range" min="1" max="10" step="1" value="5" name={{class[1].replace(" ","") + '2'}} oninput="this.nextElementSibling.value = this.value" id="range" class="istyle">
+            <output>5</output>
+          </div>
+
+          {% endfor %}
+          </div>
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)" >Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)" >Next</button>
+          
+          <div class="indicators" id="sept">
+          {% for class in classes %}
+          <span class="indicator"></span>
+          {% endfor %}
+          </div>
+
+        </form>
+        <script src="{{url_for('static', filename='survey.js')}}"></script>
+    </body>
+</html>

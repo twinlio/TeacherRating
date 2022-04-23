@@ -1,0 +1,48 @@
+h1{
+  color: black;
+  text-align: center;
+  margin-top: 3%;
+  justify-self: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e7f0fe;
+}
+#description{
+  font-weight: bold;
+  font-size: 12.5px;
+}
+form{
+  border-radius: 5px;
+  width: 20%;
+  margin: auto;
+  padding: 2.5%;
+  background: white;
+}
+input{
+  width: 100%;
+  padding: 1.5%;
+  border-radius: 5px;
+  font-size: 15px;
+}
+input[type=submit]{
+  background: #0075ff;
+  border: none;
+  color: white;
+  margin-top: 5%;
+  padding: 3%;
+}
+
+input[type=password], input[type=text] {
+  border: 1.5px #91c1fa solid;
+  box-sizing: border-box;
+  padding: 2%;
+}
+.invalid-text{
+  text-align: center;
+  color: red;
+}
+
+.form {
+  width:60%;
+}

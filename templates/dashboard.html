@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="A website for rating your ASH teacher">
+	<meta name="viewport" content="width=device-width, initial-scal=1.0">
+	<!-- <link rel="icon" type="image/png" href="link" /> -->
+	<title>ASH: Rate Teacher</title>
+  {% if mobile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='dashboard_mobile.css') }}">
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='dashboard.css') }}">
+  {% endif %}
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
+
+</head>
+
+<body>
+	<div class="top-container">
+		<div id="title">
+			<h1 id="TAPlbl">Teacher Assessment Portal</h1>
+		</div>
+		<div id="name">{{user_fullname}} &nbsp;
+			<a href="/logout"><button id="logout">Logout</button></a>
+          </div>
+        </div>
+        
+        <div class="main">
+          <div>
+          <div id="infoLbl">Classes fetched:</div>
+          <div class="teachers">
+              {% for class in classes %}
+              <div id="class"><strong>{{ class[0] }} Block : </strong>{{ class[1] }}</div>
+              {% endfor %}
+            </div>
+        </div>
+
+            <div class="surveyBox">
+              <p>Take the survey to asses your teachers on the left. Your results are later collected and the teachers will be ranked by average rating from all students after the survey is more complete.</p>
+            {% if "dddd" in user_fullname %}
+              <button class="button" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">Survey</button>
+            {% elif survey == False %}
+              <button class="button" onclick="location.href = 'https://teacherrating.twinlio.repl.co/takenSurvey';">Survey</button>
+            {% else %}
+              <button class="button" onclick="location.href = 'https://teacherrating.twinlio.repl.co/survey';">Survey</button>
+            {% endif %}
+
+
+            <button class="button" onclick="location.href = 'https://teacherrating.twinlio.repl.co/results';">Results</button>
+          </div>
+        </div>
+
+
+        
+    </body>
+</html>
+
+
+<!-- so yea -->

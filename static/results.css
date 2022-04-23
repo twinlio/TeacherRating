@@ -1,0 +1,41 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e7f0fe;
+}
+
+
+h1{
+  color: black;
+  text-align: center;
+  margin-top: 3%;
+}
+
+
+
+table{
+  margin: auto;
+  width: 75%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+table th{
+  color: #0075ff;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+h3{
+  text-align: center;
+}
+
+
+
+
+

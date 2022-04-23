@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e7f0fe;
+  padding: 0.5%;
+  justify-self: end;
+}
+
+.content {
+  color: black;
+  text-align: center;
+  margin-top: 3%;
+  justify-self: center;
+
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3%;
+  justify-self: center;
+  position: inherit;
+  top: 50%;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 40px;
+  margin-left: 30%;
+  padding: 15px;
+  height: fit-content;
+  width: 40%;
+}
+
+.button {
+  background: #0075ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  padding: 7.5px;
+}

@@ -1,0 +1,79 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e7f0fe;
+  padding: 0.5%
+}
+
+
+.top-container{
+  width: 96%;
+  height: 20px;
+  border-radius: 5px;
+  background-color: white;
+  justify-content: space-between;
+  color: black;
+  padding: 2%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#title{
+  font-weight: bold;
+}
+#logout{
+  background: #0075ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  padding: 7.5px;
+}
+
+.main{
+  width: calc(99.5% - 10px);
+  margin-top: 5px;
+  padding: 10px;
+  justify-content: space-between;
+  display: inline-flex;
+  flex-direction: row;
+  
+}
+.teachers{
+  margin-top: 5px;
+  display: table;
+  font-size: 17px;
+}
+#infoLbl{
+  font-size: 18px;
+  font-weight: bold;
+}
+#class + #class {margin-top: 7.5px}
+
+.surveyBox{
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  width: 300px;
+}
+
+.surveyBox button{
+  border: none;
+  width: 100%;
+  background-color:#0075ff;
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 7.5px;
+  justify-content: flex-end;
+}
+.surveyBox p{
+  font-weight: bold;
+  font-size: 14.5px;
+}
+
+#TAPlbl {
+  font-size: 3vw;
+}

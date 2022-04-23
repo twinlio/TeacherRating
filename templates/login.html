@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A website for rating your ASH teacher">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <!-- <link rel="icon" type="image/png" href="link" /> -->
+        <title>ASH: Rate Teacher</title>
+        {% if mobile %}
+            <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='login_mobile.css') }}">
+        {% else %}
+            <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='login.css') }}">
+        {% endif %}
+
+    </head>
+    <body>
+    <div>
+      <h1>Login to Powerschool</h1>
+      <br>
+      <form action="" method="post" class="form">
+        <div id="description">Login to your Powerschool account to confirm your classes, this is the same username and password as for the Powerschool application.</div>
+          <br>
+          
+          <div class="famlbl">
+              <p>Username<input type=text name="username" placeholder=" ">
+
+          </div>
+
+          <div class="famlbl">
+            <p>Password<input type="password" name=password placeholder=" ">
+          </div>
+          <p id="submit"><input type=submit value=Login>
+          {% if msg %}
+            <p class="invalid-text">{{ msg }}</p>
+          {% endif %}
+        </form>
+    </div>
+  </body>
+</html>

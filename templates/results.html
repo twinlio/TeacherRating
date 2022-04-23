@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A website for rating your ASH teacher">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <!-- <link rel="icon" type="image/png" href="link" /> -->
+        <title>ASH: Rate Teacher</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='results.css') }}">
+
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    </head>
+    <h1>Teacher Averages</h1>
+    <br>
+    <body>
+        <table>
+          <h3>Teaching</h3>
+          <tr>
+            <th class="left">Teacher</th>
+            <th class="right">Average</th>
+          </tr>
+          {% for doc in ratings[0] %}
+          <tr>
+            <td class="left">{{ doc[0] }}</td>
+            <td class="right">{{ doc[1] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        <br>
+        <table>
+          <h3>Knowledge</h3>
+          <tr>
+            <th class="left">Teacher</th>
+            <th class="right">Average</th>
+          </tr>
+          {% for doc in ratings[1] %}
+          <tr>
+            <td class="left">{{ doc[0] }}</td>
+            <td class="right">{{ doc[1] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        <br>
+        <table>
+          <h3>Personality</h3>
+          <tr>
+            <th class="left">Teacher</th>
+            <th class="right">Average</th>
+          </tr>
+          {% for doc in ratings[2] %}
+          <tr>
+            <td class="left">{{ doc[0] }}</td>
+            <td class="right">{{ doc[1] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      
+    </body>
+</html>

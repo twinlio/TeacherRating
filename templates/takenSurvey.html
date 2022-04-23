@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website for rating your ASH teacher">
+    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <!-- <link rel="icon" type="image/png" href="link" /> -->
+    <title>ASH: Rate Teacher</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='takensurvey.css') }}">
+
+  </head>
+  <body>
+    <div class="content">
+      <h1>It seems you've already taken the survey</h1>
+      <br>
+      <h2>Today it is {{ a }}</h2>
+      {% if until_monday == 1 %}
+        <p>You can take the survey again tomorrow</p>
+      {% else %}
+        <p>You can take the survey again next monday, in {{ until_monday }} days</p>
+      {% endif %}
+      <button class="button" onclick="location.href = 'https://teacherrating.twinlio.repl.co/dashboard';">Back to Portal</button>
+    </div>
+  </body>
+</html>
